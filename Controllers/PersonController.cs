@@ -3,6 +3,17 @@ using Microsoft.AspNetCore.Mvc;
 using QueryApi.Repositories;
 using QueryApi.Domain;
 
+/*Nombre de la escuela: Universidad Tecnologica Metropolitana
+Asignatura: Aplicaciones Web Orientadas a Objetos
+Nombre del Maestro: Chuc Uc Joel Ivan
+Nombre de la actividad: Actividad 1
+Nombre del alumno: Avila Ramayao Brandon Jefte
+Cuatrimestre: 4
+Grupo: B
+Parcial: 2
+*/
+
+
 namespace Controllers
 {
     [ApiController]
