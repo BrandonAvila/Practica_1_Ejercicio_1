@@ -10,16 +10,16 @@ namespace Controllers
     public class PersonController : ControllerBase
     {
         [HttpGet]
-        [Route("Todos")]
-        public IActionResult Todos ()
+        [Route("TodosLosDatos")]
+        public IActionResult TodosLosDatos ()
         {
             var repository = new PersonRepository();
             var persons = repository.TodosLosDatos();
             return Ok(persons);
         } 
         [HttpGet]
-        [Route("Campos")]
-        public IActionResult Campos ()
+        [Route("ObtenerCampos")]
+        public IActionResult ObtenerCampos ()
         {
             var repository = new PersonRepository();
             var persons = repository.ObtenerCampos();
@@ -27,8 +27,8 @@ namespace Controllers
         } 
 
         [HttpGet]
-        [Route("Generos")]
-        public IActionResult BuscarGenero (char gender)
+        [Route("ObtenerGenero")]
+        public IActionResult ObtenerGenero (char gender)
         {
             var repository = new PersonRepository();
             var persons = repository.ObtenerGenero(gender);
@@ -36,8 +36,8 @@ namespace Controllers
         } 
 
         [HttpGet]
-        [Route("RangoEdad")]
-        public IActionResult RangoDeEdad (int minAge, int maxAge)
+        [Route("ObtenerRangoDeEdad")]
+        public IActionResult ObtenerRangoDeEdad (int minAge, int maxAge)
         {
             var repository = new PersonRepository();
             var persons = repository.ObtenerRangoDeEdad(minAge, maxAge);
@@ -46,7 +46,7 @@ namespace Controllers
 
         [HttpGet]
         [Route("ObtenerTrabajos")]
-        public IActionResult Trabajos ()
+        public IActionResult ObtenerTrabajos ()
         {
             var repository = new PersonRepository();
             var persons = repository.ObtenerTrabajos();
@@ -55,7 +55,7 @@ namespace Controllers
 
         [HttpGet]
         [Route("ObtenerContenido")]
-        public IActionResult BuscarContenido (string partName)
+        public IActionResult ObtenerContenido (string partName)
         {
             var repository = new PersonRepository();
             var persons = repository.ObtenerContenido(partName);
@@ -63,8 +63,8 @@ namespace Controllers
         }
 
         [HttpGet]
-        [Route("ObtenerEdades")]
-        public IActionResult BuscarPorEdades (int age1, int age2, int age3)
+        [Route("ObtenerPorEdades")]
+        public IActionResult ObtenerPorEdades (int age1, int age2, int age3)
         {
             var repository = new PersonRepository();
             var persons = repository.ObtenerPorEdades(age1, age2, age3);
@@ -73,7 +73,7 @@ namespace Controllers
 
         [HttpGet]
         [Route("ObtenerPersonasOrdenadas")]
-        public IActionResult BuscarPersonasOrdenadas (int age)
+        public IActionResult ObtenerPersonasOrdenadas (int age)
         {
             var repository = new PersonRepository();
             var persons = repository.ObtenerPersonasOrdenadas(age);
@@ -82,7 +82,7 @@ namespace Controllers
 
         [HttpGet]
         [Route("ObtenerRangoPorEdadYGenero")]
-        public IActionResult BuscarRangoPorEdadYGenero (int minAge, int maxAge, char gender)
+        public IActionResult ObtenerRangoPorEdadYGenero (int minAge, int maxAge, char gender)
         {
             var repository = new PersonRepository();
             var persons = repository.ObtenerRangoPorEdadYGenero(minAge, maxAge, gender);
@@ -91,7 +91,7 @@ namespace Controllers
 
         [HttpGet]
         [Route("ContarGenero")]
-        public IActionResult ContarGeneros (char gender)
+        public IActionResult ContarGenero (char gender)
         {
             var repository = new PersonRepository();
             var persons = repository.ContarGenero(gender);
@@ -100,7 +100,7 @@ namespace Controllers
 
                 [HttpGet]
         [Route("PersonaExistenteApellido")]
-        public IActionResult PersonaExistenteConApellido (string lastName)
+        public IActionResult PersonaExistenteApellido (string lastName)
         {
             var repository = new PersonRepository();
             var persons = repository.PersonaExistenteApellido(lastName);
@@ -109,7 +109,7 @@ namespace Controllers
 
         [HttpGet]
         [Route("ObtenerTrabajoDeUnaPersonaYSuEdad")]
-        public IActionResult BuscarTrabajoDeUnaPersonaYSuEdad (string job, int age)
+        public IActionResult ObtenerTrabajoDeUnaPersonaYSuEdad (string job, int age)
         {
             var repository = new PersonRepository();
             var persons = repository.ObtenerTrabajoDeUnaPersonaYSuEdad(job, age);
@@ -118,7 +118,7 @@ namespace Controllers
 
         [HttpGet]
         [Route("TomarPersonas")]
-        public IActionResult TakePersonas (string job, int take)
+        public IActionResult TomarPersonas (string job, int take)
         {
             var repository = new PersonRepository();
             var persons = repository.TomarPersonas(job, take);
@@ -127,7 +127,7 @@ namespace Controllers
 
         [HttpGet]
         [Route("TomarLasUltimasPersonas")]
-        public IActionResult TakeLasUltimasPersonas (string job, int takeLast)
+        public IActionResult TomarLasUltimasPersonas (string job, int takeLast)
         {
             var repository = new PersonRepository();
             var persons = repository.TomarLasUltimasPersonas(job, takeLast);
@@ -136,7 +136,7 @@ namespace Controllers
 
         [HttpGet]
         [Route("SaltarYTomarUnasPersona")]
-        public IActionResult SkipAndTakeUnasPersona (string job, int skip, int take)
+        public IActionResult SaltarYTomarUnasPersona (string job, int skip, int take)
         {
             var repository = new PersonRepository();
             var persons = repository.SaltarYTomarUnasPersona(job, skip, take);
